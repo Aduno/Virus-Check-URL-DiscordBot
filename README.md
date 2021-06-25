@@ -1,7 +1,7 @@
 # Virus-Check-URL-DiscordBot
 Discord bot that uses the VirusTotal api to check if URL link is safe
 
-# How to use
+## How to use
 To use this bot, the token for the discord bot and VirusTotal is required. 
 Once the tokens are aquired, enter them into vtToken and discordToken variables located 
 
