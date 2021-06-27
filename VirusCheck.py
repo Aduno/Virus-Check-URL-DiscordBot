@@ -65,5 +65,5 @@ async def on_message(message):
                 await message.channel.send("Please enter a valid URL")
     elif msg.startswith('check') and time_since_request() < 15:
         await message.channel.send("Please wait "+str(round(15-time_since_request()))+" seconds "+" before checking another URL")
-
-client.run(discordToken)
+if __name__=="__main__":
+    client.run(discordToken)
