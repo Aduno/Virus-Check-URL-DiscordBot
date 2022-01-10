@@ -11,6 +11,7 @@ vtToken = 'TOKEN FOR VIRUSTOTAL'
 discordToken = 'TOKEN FOR BOT'
 url = 'https://www.virustotal.com/vtapi/v2/url/report'
 elapsed = 0.0
+keyWord = 'check'
 
 
 # Gets the time elapsed since last request
@@ -32,7 +33,7 @@ async def on_message(message):
     msg = message.content
 
     # Checks if the user sent the keyword check at the front and it has been more than 15 seconds since the last request
-    if msg.startswith('check') and time_since_request() > 15:
+    if msg.startswith(keyword) and time_since_request() > 15:
 
         # Validing user input
         urlToScan = msg.split(' ')
@@ -63,7 +64,7 @@ async def on_message(message):
             # If the user enters an invalid link
             else:
                 await message.channel.send("Please enter a valid URL")
-    elif msg.startswith('check') and time_since_request() < 15:
+    elif msg.startswith(keyword) and time_since_request() < 15:
         await message.channel.send("Please wait "+str(round(15-time_since_request()))+" seconds "+" before checking another URL")
 if __name__=="__main__":
     client.run(discordToken)
