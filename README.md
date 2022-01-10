@@ -10,4 +10,4 @@ By default, the bot is activated by the keyword 'check'
 *https://developers.virustotal.com/reference for info on how to get the api key
 
 ## Modifications
-To change the command to activate the bot, change the string 'check' in line 35 and 66 to a desired message
+To change the command to activate the bot, change the string 'check' in line 14 to a desired message
